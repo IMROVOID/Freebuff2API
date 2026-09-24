@@ -47,6 +47,7 @@
   },
   "author": "IMROVOID",
   "license": "GPL-3.0-or-later",
+  "readmeFilename": "README.md",
   "dependencies": {
     "@hono/node-server": "^1.13.8",
     "commander": "^13.1.0",
