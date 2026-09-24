@@ -1,0 +1,43 @@
+{
+  "name": "freebuff2api",
+  "version": "1.0.0",
+  "description": "OpenAI-compatible OAuth router and proxy for Freebuff unmetered AI access",
+  "main": "dist/cli.js",
+  "bin": {
+    "freebuff2api": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "dev": "tsx src/cli/index.ts serve --port 8787",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy:worker": "npm run build && wrangler deploy"
+  },
+  "keywords": [
+    "freebuff",
+    "codebuff",
+    "openai",
+    "proxy",
+    "router",
+    "cloudflare-workers"
+  ],
+  "author": "",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "commander": "^13.1.0",
+    "hono": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.3",
+    "typescript": "^7.0.2",
+    "vitest": "^3.0.8",
+    "wrangler": "^3.111.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

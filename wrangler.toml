@@ -1,0 +1,7 @@
+name = "freebuff2api"
+main = "worker.js"
+compatibility_date = "2024-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+DEFAULT_MODEL = "deepseek/deepseek-v4-flash"
