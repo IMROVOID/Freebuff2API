@@ -1,6 +1,6 @@
 {
   "name": "freebuff2api-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "High-performance, dual-runtime OpenAI-compatible API router and OAuth proxy for Freebuff unmetered AI access",
   "main": "dist/cli.js",
   "bin": {
