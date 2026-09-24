@@ -1,9 +1,11 @@
 <div align="center">
 
+<img src="./public/Freebuff2API_Banner.webp" alt="Freebuff2API Banner" width="100%">
+
 # Freebuff2API
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![npm version](https://img.shields.io/npm/v/freebuff2api.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/freebuff2api)
+[![npm version](https://img.shields.io/npm/v/freebuff2api-proxy.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/freebuff2api-proxy)
 [![CI](https://github.com/IMROVOID/Freebuff2API/actions/workflows/test.yml/badge.svg)](https://github.com/IMROVOID/Freebuff2API/actions/workflows/test.yml)
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -87,27 +89,27 @@ Modern coding agents like **Claude Code, Codex, Cursor, Antigravity, Cline, Open
 Run the local proxy daemon immediately with no clone or install needed:
 
 ```bash
-npx freebuff2api serve
+npx freebuff2api-proxy serve
 ```
 
 Or with custom port and explicit token:
 
 ```bash
-npx freebuff2api serve --port 8787 --token fb_live_your_token
+npx freebuff2api-proxy serve --port 8787 --token fb_live_your_token
 ```
 
 #### Option B: Global CLI Installation
 
-Install globally to make the `freebuff2api` command available anywhere on your system:
+Install globally to make both `freebuff2api` and `freebuff2api-proxy` commands available anywhere on your system:
 
 ```bash
-npm install -g freebuff2api
+npm install -g freebuff2api-proxy
 ```
 
 Then run:
 
 ```bash
-# Start the local daemon
+# Start the local daemon (both freebuff2api and freebuff2api-proxy binaries available)
 freebuff2api serve
 
 # Authenticate via browser device-code flow
@@ -913,6 +915,8 @@ Freebuff2API/
 │   └── cli.js                    # Standalone Node.js executable daemon bundle (238 KB)
 ├── worker.js                     # Standalone Cloudflare Workers bundle (86 KB)
 ├── tests/                        # 35 automated unit and integration tests (Vitest)
+├── public/
+│   └── Freebuff2API_Banner.webp  # Repository header banner
 ├── wrangler.toml                 # Cloudflare Workers configuration
 ├── package.json                  # Dependencies and build scripts
 └── tsconfig.json                 # Strict TypeScript configuration

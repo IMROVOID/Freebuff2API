@@ -1,17 +1,27 @@
 {
-  "name": "freebuff2api",
+  "name": "freebuff2api-proxy",
   "version": "1.0.0",
-  "description": "OpenAI-compatible OAuth router and proxy for Freebuff unmetered AI access",
+  "description": "High-performance, dual-runtime OpenAI-compatible API router and OAuth proxy for Freebuff unmetered AI access",
   "main": "dist/cli.js",
   "bin": {
-    "freebuff2api": "dist/cli.js"
+    "freebuff2api": "dist/cli.js",
+    "freebuff2api-proxy": "dist/cli.js"
   },
+  "files": [
+    "dist",
+    "worker.js",
+    "public",
+    "README.md",
+    "LICENSE",
+    "wrangler.toml"
+  ],
   "scripts": {
     "build": "tsx scripts/build.ts",
     "dev": "tsx src/cli/index.ts serve --port 8787",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
     "deploy:worker": "npm run build && wrangler deploy"
   },
   "keywords": [
@@ -20,10 +30,23 @@
     "openai",
     "proxy",
     "router",
-    "cloudflare-workers"
+    "reverse-proxy",
+    "cloudflare-workers",
+    "deepseek",
+    "hono",
+    "agent",
+    "ai-gateway"
   ],
-  "author": "",
-  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/IMROVOID/Freebuff2API#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMROVOID/Freebuff2API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IMROVOID/Freebuff2API/issues"
+  },
+  "author": "IMROVOID",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "@hono/node-server": "^1.13.8",
     "commander": "^13.1.0",
